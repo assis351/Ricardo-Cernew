@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Cernew | Área do Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--cabeçario-->
+    <header class="menu-header">
+        <div class="menu-left">
+            <a href="index.html">
+                <img src="icons/logo nome ricardo.png" alt="">
+            </a>
+            <span class="nome-doutor">Dr. <span>Ricardo Cernew</span></span>
+        </div>
+
+        <nav class="menu-center">
+            <a href="index.html" class="nav-center">Home</a>
+            <a href="sobre.html" class="nav-center">Sobre</a>
+            <a href="contato.html" class="nav-center">Contato</a>
+            <a href="blog.html" class="nav-center">Blog</a>
+            <a href="atuação.html" class="nav-center">Áreas de Atuação</a>
+        </nav>
+
+        <div class="menu-right">
+            <a href="login.html" class="btn-consulta">Consulta</a>
+        </div>
+    </header>
+    <!--fim cabeçario-->
+
+    <!--conteudo-->
+    <section class="auth-wrap">
+
+        <!-- LOGIN -->
+        <div id="login-area" class="auth-box">
+            <h2>Entrar</h2>
+            <p class="auth-sub">Acesse a área do cliente para acompanhar seu processo.</p>
+
+            <div class="social-login" data-rede="Facebook">Entrar com Facebook</div>
+            <div class="social-login" data-rede="Apple">Entrar com Apple</div>
+            <div class="social-login" data-rede="Google">Entrar com Google</div>
+
+            <div class="auth-divisor"><span>ou</span></div>
+
+            <div class="input-box">
+                <label for="login-email">E-mail</label>
+                <input type="email" id="login-email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="input-box">
+                <label for="login-senha">Senha</label>
+                <input type="password" id="login-senha" placeholder="Digite sua senha">
+            </div>
+
+            <button class="btn" id="btnEntrar">Entrar</button>
+            <p class="link" onclick="mostrarCadastro()">Ainda não tem conta? Cadastre-se</p>
+        </div>
+
+        <!-- CADASTRO -->
+        <div id="cadastro-area" class="auth-box" style="display:none;">
+            <h2>Cadastro</h2>
+            <p class="auth-sub">Crie sua conta para acompanhar o andamento do seu caso.</p>
+
+            <div class="social-login" data-rede="Facebook">Cadastrar com Facebook</div>
+            <div class="social-login" data-rede="Apple">Cadastrar com Apple</div>
+            <div class="social-login" data-rede="Google">Cadastrar com Google</div>
+
+            <div class="auth-divisor"><span>ou</span></div>
+
+            <div class="input-box">
+                <label for="cad-usuario">Nome de Usuário</label>
+                <input type="text" id="cad-usuario" placeholder="Crie um nome de usuário">
+            </div>
+            <div class="input-box">
+                <label for="cad-email">E-mail</label>
+                <input type="email" id="cad-email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="input-box">
+                <label for="cad-senha">Senha</label>
+                <input type="password" id="cad-senha" placeholder="Crie uma senha (mín. 6 caracteres)">
+            </div>
+
+            <button class="btn" id="btnCadastrar">Cadastrar</button>
+            <p class="link" onclick="mostrarLogin()">Já possui conta? Entrar</p>
+        </div>
+
+    </section>
+    <!--fim conteudo-->
+
+    <!--rodapé-->
+    <footer>
+
+        <div class="frase">
+            <img src="icons/logo ricardo.jpg" alt=""> <br>
+            <p>Atuamos com compromisso, dedicação e responsabilidade, oferecendo soluções jurídicas seguras e eficazes
+                para cada cliente.</p>
+        </div>
+
+        <div class="rodape">
+
+            <div class="acesso-rapido">
+                <h3>Acesso rápido</h3>
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Entre em contato</a>
+                <a href="blog.html">Blog</a>
+                <a href="atuação.html">Areas de atuação</a>
+            </div>
+
+            <div class="rede-social">
+                <h3>Redes sociais e contato</h3>
+                <a href="https://wa.me/5511999048241" target="_blank">
+                    <img src="icons/icon whatsapp.png" alt="" class="icone"> WhatsApp
+                </a>
+                <a href="https://facebook.com/ricardocernew.2020" target="_blank">
+                    <img src="icons/icon facebook.png" alt="" class="icone"> Facebook
+                </a>
+                <a href="https://instagram.com/ricardocernewadvocacia" target="_blank">
+                    <img src="icons/icon instagram.png" alt="" class="icone"> Instagram
+                </a>
+                <a href="mailto:ricardocernew@yahoo.com" target="_blank">
+                    <img src="icons/icon email.png" alt="" class="icone"> Email
+                </a>
+                <br>
+                <p>Email: ricardocernew@yahoo.com</p>
+                <p>Celular: +55 (11) 99904-8241</p>
+            </div>
+
+            <div class="endereço">
+                <h3>Endereço</h3>
+                <p>R. Jurubatuba, 1350 - Sala 1307 - Centro, São Bernardo do Campo - SP, 09725-000</p>
+            </div>
+
+        </div>
+
+        <div class="copy">
+            <p>&copy; 2025 Ricardo Cernew Advocacia. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+    <!-- fim rodapé-->
+
+    <div> <!--icone watsapp fixo final da pagina-->
+        <a href="https://wa.me/5511999048241" class="whatsapp-flutuante" target="_blank">
+            <img src="icons/icon whatsapp.png" alt="">
+        </a>
+    </div>
+
+    <script src="js/site.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Cernew</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--cabeçario-->
+    <header class="menu-header">
+        <div class="menu-left">
+            <a href="index.html">
+                <img src="icons/logo nome ricardo.png" alt="">
+            </a>
+            <span class="nome-doutor">Dr. <span>Ricardo Cernew</span></span>
+            <!--<h2>RICARDO CERNEW</h2>-->
+        </div>
+
+        <nav class="menu-center">
+            <a href="index.html" class="nav-center">Home</a>
+            <a href="sobre.html" class="nav-center">Sobre</a>
+            <a href="contato.html" class="ativo">Contato</a>
+            <a href="blog.html" class="nav-center">Blog</a>
+            <a href="atuação.html" class="nav-center">Áreas de Atuação</a>
+        </nav>
+
+        <div class="menu-right">
+            <a href="login.html" class="btn-consulta">Consulta</a>
+        </div>
+    </header>
+
+    <!--fim cabeçario-->
+
+
+
+
+
+    <!--conteudo-->
+
+
+
+    <!--formulario-->
+
+    <main class="card" role="main" aria-labelledby="title">
+
+        <h1 id="title">Agende sua consulta</h1>
+        <p class="lead">Preencha o formulário abaixo para entrar em contato por e-mail e solicitar um horário com o
+            advogado. Você receberá confirmação por e-mail assim que possível.</p>
+
+
+        <form id="contactForm" novalidate>
+
+            <div>
+                <label for="name">Nome completo *</label>
+                <input id="name" name="name" type="text" required />
+            </div>
+
+            <div>
+                <label for="email">E-mail *</label>
+                <input id="email" name="email" type="email" required />
+
+                <div class="error" id="err-email">E-mail inválido.</div>
+            </div>
+
+            <div>
+                <div class="error" id="err-phone">Insira um telefone válido.</div>
+                <label for="phone">Telefone / WhatsApp *</label>
+                <input id="phone" name="phone" type="tel" required placeholder="(11) 9 9999-9999" />
+            </div>
+
+            <div>
+                <label for="area">Área de atuação</label>
+                <select id="area" name="area">
+                    <option value="Geral">Selecione ou informe</option>
+                    <option>Direito Civil</option>
+                    <option>Direito Trabalhista</option>
+                    <option>Direito Previdenciario</option>
+                </select>
+            </div>
+
+            <div>
+                <div class="error" id="err-date">Escolha uma data futura.</div>
+                <label for="date">Data desejada *</label>
+                <input id="date" name="date" type="date" required />
+            </div>
+
+            <div>
+                <div class="error" id="err-time">Escolha um horário válido.</div>
+                <label for="time">Hora desejada *</label>
+                <input id="time" name="time" type="time" required />
+            </div>
+
+            <div class="full">
+                <label for="message">Mensagem / Breve descrição do caso</label>
+                <textarea id="message" name="message"
+                    placeholder="Explique brevemente o motivo do contato (opcional)"></textarea>
+            </div>
+
+            <div class="actions">
+                <button type="submit" id="sendBtn">Enviar e abrir e-mail</button>
+                <button type="button" class="secondary" id="copyBtn">Copiar detalhes (área de
+                    transferência)</button>
+                <span class="hint">ou</span>
+                <span id="status" class="success">Pedido preparado! Abra seu cliente de e-mail.</span>
+            </div>
+
+        </form>
+
+    </main>
+    <!--fim formulario-->
+
+
+
+
+    <!--mapa-->
+
+    <div class="container">
+
+        <div class="card" role="region" aria-label="Localização do escritório">
+
+            <div>
+
+                <h1>Escritório — Endereço</h1>
+                <p class="address" id="addr">
+                    R. Jurubatuba, 1350 - Sala 1307 - Centro,<br />
+                    São Bernardo do Campo - SP, 09725-000
+                </p>
+
+                <div class="actions">
+                    <button class="btn primary" id="openMaps">Abrir no Google Maps</button>
+                    <button class="btn ghost" id="copyAddr">Copiar endereço</button>
+                </div>
+
+                <p class="meta">Clique em "Abrir no Google Maps" para rotas e mais detalhes.</p>
+
+            </div>
+
+
+            <div> <!--mapa interativo-->
+
+                <div class="map-wrap" title="Mapa">
+                    <!-- O parâmetro `q=` usa o endereço; `output=embed` gera o iframe sem necessidade de API key -->
+                    <iframe id="mapFrame"
+                        src="https://www.google.com/maps?q=R.+Jurubatuba,+1350+-+Sala+1307+-+Centro,+S%C3%A3o+Bernardo+do+Campo+-+SP,+09725-000&output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mapa do endereço">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--fim mapa-->
+
+
+
+
+
+    <!--perguntas frequentes-->
+    <section class="faq">
+
+        <h2>Perguntas Frequentes (FAQ)</h2>
+
+        <div class="faq-item"> <!--pergunta 1-->
+            <button class="faq-pergunta">Como funciona a consulta?</button>
+            <div class="faq-resposta">A consulta pode ser presencial ou online. Durante o atendimento, o advogado
+                analisa seu caso e orienta sobre direitos, riscos e soluções.</div>
+        </div>
+
+        <div class="faq-item"><!--pergunta 2-->
+            <button class="faq-pergunta">A consulta é sigilosa?</button>
+            <div class="faq-resposta">Sim. Todo contato com o advogado é protegido por sigilo profissional.</div>
+        </div>
+
+        <div class="faq-item"><!--pergunta 3-->
+            <button class="faq-pergunta">Quanto tempo dura a consulta?</button>
+            <div class="faq-resposta">Normalmente entre 30 e 50 minutos, dependendo da complexidade do caso.</div>
+        </div>
+
+        <div class="faq-item"><!--pergunta 4-->
+            <button class="faq-pergunta">Posso enviar documentos antecipadamente?</button>
+            <div class="faq-resposta">Sim, você pode enviar documentos pelo WhatsApp ou e-mail para uma análise inicial.
+            </div>
+        </div>
+
+    </section>
+    <!--fim perguntas frequentes-->
+
+
+    <!--fim conteudo-->
+
+
+
+
+
+
+    <!--rodapé-->
+
+    <footer>
+
+
+        <div class="frase"><!--logotipo e frase do ricardo-->
+            <img src="icons/logo ricardo.jpg" alt=""> <br>
+
+            <!--<p>“Defendendo seus direitos com seriedade, integridade e dedicação.”</p> -->
+            <p>Atuamos com compromisso, dedicação e responsabilidade, oferecendo soluções jurídicas seguras e eficazes
+                para cada cliente.</p>
+        </div>
+
+
+
+        <div class="rodape">
+
+            <div class="acesso-rapido">
+                <h3>Acesso rápido</h3>
+
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Entre em contato</a> 
+                <a href="blog.html">Blog</a>
+                <a href="atuação.html">Areas de atuação</a>
+            </div>
+
+            <div class="rede-social">
+
+                <h3>Redes sociais e contato</h3>
+
+                <!--icones das redes sociais-->
+                <a href="https://wa.me/5511999048241" target="_blank">
+                    <img src="icons/icon whatsapp.png" alt="" class="icone"> WhatsApp <!--watsapp-->
+                </a>
+
+                <a href="https://facebook.com/ricardocernew.2020" target="_blank">
+                    <img src="icons/icon facebook.png" alt="" class="icone"> Facebook <!--facebook-->
+                </a>
+
+                <a href="https://instagram.com/ricardocernewadvocacia" target="_blank">
+                    <img src="icons/icon instagram.png" alt="" class="icone"> Instagram <!--instagran-->
+                </a>
+
+                <a href="mailto:ricardocernew@yahoo.com" target="_blank">
+                    <img src="icons/icon email.png" alt="" class="icone"> Email <!--email-->
+                </a>
+                <br>
+
+                <p>Email: ricardocernew@yahoo.com</p>
+                <p>Celular: +55 (11) 99904-8241</p>
+
+            </div>
+
+
+            <div class="endereço">
+                <h3>Endereço</h3>
+                <p>R. Jurubatuba, 1350 - Sala 1307 - Centro, São Bernardo do Campo - SP, 09725-000</p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="copy">
+            <p>&copy; 2025 Ricardo Cernew Advocacia. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- fim rodapé-->
+
+
+
+    <div> <!--icone watsapp fixo final da pagina-->
+        <a href="https://wa.me/5511999048241" class="whatsapp-flutuante" target="_blank">
+            <img src="icons/icon whatsapp.png" alt="">
+        </a>
+
+    </div>
+
+
+
+    <script src="js/site.js"></script>
+    <script src="js/contato.js"></script>
+
+
+
+</body>
+
+</html>
